@@ -6,25 +6,33 @@
 // Output the minimum number of operations needed to make the array not sorted.
 
 #include <iostream>
+#define INF 10000000000
+
 using namespace std;
+
+long long int t, n, a, minim, b, i, ok;
 
 int main()
 {
-    int t;
     cin >> t;
-    for (int i = 0; i < t; i++)
+    while (t--)
     {
-        int n, k;
-        cin >> n >> k;
-        int dp[k + 1];
-        dp[0] = 1;
-        dp[1] = 1;
-        for (int j = 2; j <= k; j++)
+        cin >> n;
+        minim = INF;
+        cin >> a;
+        for (i = 1, ok = 1; i < n; i++)
         {
-            dp[j] = dp[j - 1] + dp[j - 2];
+            cin >> b;
+            if (a > b)
+                ok = 0;
+            else if ((b - a) / 2 + 1 < minim)
+                minim = (b - a) / 2 + 1;
+            a = b;
         }
-        cout
-            << dp[k] << endl;
+        if (!ok)
+            cout << 0 << '\n';
+        else
+            cout << minim << '\n';
     }
     return 0;
 }

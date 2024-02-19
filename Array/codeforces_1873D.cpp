@@ -6,49 +6,41 @@
 // The sum of n over all test cases does not exceed 2⋅105 .
 // For each test case, output a single integer — the minimum number of operations needed to remove all black cells.
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
-
+#define ll long long
+#define vv vector<long long>
+#define mm map<long long, longlong>
+#define st set<long long>
+#define at for (int i = 0; i < n; i++)
 int main()
 {
-    int n;
-    cin >> n;
-
-    vector<int> s(n);
-    for (int i = 0; i <= n; i++)
-    {
-        cin >> s[i];
-    }
-
-    sort(s.begin(), s.end());
-
     int t;
     cin >> t;
-    for (int i = 0; i <= t; i++)
+    while (t--)
     {
-        int k;
-        cin >> k;
-
-        int left = 0;
-        int right = n - 1;
-
-        while (left <= right)
+        int n, k;
+        cin >> n >> k;
+        string s;
+        cin >> s;
+        int count = 0;
+        for (int i = 0; i < n; i++)
         {
-            int mid = (left + right) / 2;
-
-            if (s[mid] <= k)
+            if (s[i] == 'B')
             {
-                left = mid + 1;
-            }
-            else
-            {
-                right = mid - 1;
+                s[i] = 'w';
+                int x = min(i + k, n);
+                for (int j = i; j < x; j++)
+                {
+                    if (s[j] == 'B')
+                    {
+                        s[j] = 'w';
+                        i = j - 1;
+                    }
+                }
+                count++;
             }
         }
-
-        cout << right + 1 << endl;
+        cout << count << endl;
     }
-    return 0;
 }

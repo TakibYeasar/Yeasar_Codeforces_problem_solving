@@ -6,41 +6,74 @@
 // Print string a,which describes the arrangement after t seconds.If the i - th position has a boy after
 // the needed time, then the i - th character a must equal "B", otherwise it must equal "G".
 
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+
+// int main()
+// {
+//     queue<int> queue;
+//     int n, patience;
+
+//     cin >> n;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> patience;
+//         queue.push(patience);
+//     }
+
+//     int left = 0;
+
+//     while (!queue.empty())
+//     {
+//         int patience = queue.front();
+//         queue.pop();
+
+//         if (patience > 1)
+//         {
+//             patience--;
+//             queue.push(patience);
+//         }
+//         else
+//         {
+//             left++;
+//         }
+//     }
+
+//     cout << left << endl;
+
+//     return 0;
+// }
+
 #include <iostream>
-#include <queue>
+
 using namespace std;
 
 int main()
 {
-    queue<int> queue;
-    int n, patience;
+    int n, t, i, j;
+    cin >> n >> t;
+    string s;
 
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        cin >> patience;
-        queue.push(patience);
+        cin >> s;
     }
 
-    int left = 0;
-
-    while (!queue.empty())
+    for (i = 1; i <= t; i++)
     {
-        int patience = queue.front();
-        queue.pop();
 
-        if (patience > 1)
+        for (j = 0; j < n - 1; j++)
         {
-            patience--;
-            queue.push(patience);
-        }
-        else
-        {
-            left++;
+
+            if (s[j] == 'B' && s[j + 1] == 'G')
+            {
+                swap(s[j], s[j + 1]);
+                j++;
+            }
         }
     }
-
-    cout << left << endl;
+    cout << s << endl;
 
     return 0;
 }

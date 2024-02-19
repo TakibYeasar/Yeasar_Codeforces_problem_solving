@@ -27,7 +27,8 @@ def ultra_fast_mathematician(a, b):
 def main():
   """Solves Codeforces problem 61A: Ultra-Fast Mathematician."""
 
-  a, b = input().split()
+  a = input()
+  b = input()
 
   c = ultra_fast_mathematician(a, b)
 

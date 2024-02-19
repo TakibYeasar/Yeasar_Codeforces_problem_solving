@@ -4,7 +4,7 @@
 // stones in the row numbered from 1 to n from left to right. Then the i-th character s equals "R",
 // if the i-th stone is red, "G", if it' s green and "B", if it's blue.
 // Print a single integer — the answer to the problem.
- 
+
 #include <iostream>
 #include <string>
 using namespace std;

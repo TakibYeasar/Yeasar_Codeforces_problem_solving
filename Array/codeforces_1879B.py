@@ -4,32 +4,28 @@
 # b2,…, bn(1≤bi≤109). The sum of n over all test cases doesn't exceed 3⋅105 .
 # For each test case, print a single integer — the minimum possible total cost of putting chips according to the rules.
 
+def solve():
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
 
-n, m = map(int, input().split())
-board = [input() for _ in range(n)]
+    a.sort()
+    b.sort()
+    sum1 = n * b[0]
+    sum2 = n * a[0]
 
-odd_rows, even_rows, odd_cols, even_cols = 0, 0, 0, 0
+    for i in range(n):
+        sum1 += a[i]
+        sum2 += b[i]
 
-for i in range(n):
-    for j in range(m):
-        if board[i][j] == '1':
-            if i % 2 == 0:
-                if j % 2 == 0:
-                    even_rows += 1
-                else:
-                    odd_cols += 1
-            else:
-                if j % 2 == 0:
-                    odd_rows += 1
-                else:
-                    even_cols += 1
+    print(min(sum1, sum2))
 
-total_moves = 0
 
-if n % 2 == 0:
-    total_moves = max(odd_rows, even_rows) + max(odd_cols, even_cols)
-else:
-    total_moves = odd_rows + even_rows + odd_cols + even_cols
-    total_moves = min(total_moves, n * m - total_moves)
+def main():
+    t = int(input())
+    for _ in range(t):
+        solve()
 
-print(total_moves)
+
+if __name__ == "__main__":
+    main()

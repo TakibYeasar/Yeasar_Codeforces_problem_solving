@@ -6,77 +6,45 @@
 // If you can,the second line should contain a single integer m— the total amount of taken integers.The third line should contain m
 // integers — each of them from 1 to k, not equal to x,and their sum is n.
 // If there are multiple answers,print any of them.
+#include <bits/stdc++.h>
 
-// #include <iostream>
-// using namespace std;
+#define ll long long int
+#define pb push_back
 
-// int main()
-// {
-//     int t;
-//     cin >> t;
-//     for (int i = 0; i < t; i++)
-//     {
-//         int n, k, x;
-//         cin >> n >> k >> x;
-//         int sum = 0;
-//         for (int j = 1; j <= k; j++)
-//         {
-//             if (j != x)
-//             {
-//                 sum += j;
-//             }
-//         }
-//         if (sum == n)
-//         {
-//             cout << "YES" << endl;
-//             cout << 1 << endl;
-//             cout << n - 1 << endl;
-//         }
-//         else
-//         {
-//             cout << "NO" << endl;
-//         }
-//     }
-//     return 0;
-// }
-
-#include <iostream>
-#include <vector>
 using namespace std;
 
 int main()
 {
+
     int t;
     cin >> t;
-
-    for (int j = 0; j < t; ++j)
+    while (t--)
     {
-        int n, k, x;
+        int x, n, k, s;
         cin >> n >> k >> x;
-
-        vector<int> a(n);
-        for (int i = 0; i < n; ++i)
+        if (x != 1)
         {
-            cin >> a[i];
+            cout << "YES" << endl;
+            cout << n << '\n';
+            for (int i = 0; i < n; i++)
+                cout << '1' << ' ';
+            cout << '\n';
         }
-
-        bool possible = true;
-        for (int i = 0; i < n; ++i)
+        else if (n % 2 == 1 && k == 2)
         {
-            if (a[i] == x)
-            {
-                possible = false;
-                break;
-            }
+            cout << "NO" << endl;
         }
-
-        if (possible)
+        else if (k == 1)
         {
-            cout << "Yes" << endl;
+            cout << "NO" << endl;
         }
         else
         {
-            cout << "No" << endl;
+            cout << "YES\n";
+            cout << n / 2 << '\n';
+            for (int i = 1; i < n / 2; i++)
+                cout << 2 << " ";
+            cout << 2 + (n % 2) << '\n';
         }
     }
 

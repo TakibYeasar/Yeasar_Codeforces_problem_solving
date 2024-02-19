@@ -12,48 +12,48 @@
 // at least one such value of w exists as well.If there are multiple answers, you can print any of them;
 // otherwise, print one integer −1.
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
 int main()
 {
-    int n, k;
-    cin >> n >> k;
 
-    if (n % k != 0)
+    ll t;
+    cin >> t;
+
+    while (t--)
     {
-        cout << -1 << endl;
-        return 0;
-    }
 
-    int groups = n / k;
-    int groups_with_extra = groups / 2 + 1;
+        ll n;
+        cin >> n;
 
-    if (groups_with_extra > k)
-    {
-        cout << -1 << endl;
-        return 0;
-    }
+        ll cmp1, cmp2;
+        cin >> cmp1 >> cmp2;
 
-    vector<int> scores(n);
-    for (int i = 0; i < n; i++)
-    {
-        if (i < groups_with_extra * k)
+        bool possible = true;
+        for (ll i = 1; i < n; i++)
         {
-            scores[i] = groups - groups_with_extra + 1 - (i / k);
+
+            ll u1, u2;
+            cin >> u1 >> u2;
+
+            if (u1 >= cmp1 && cmp2 <= u2)
+            {
+                possible = false;
+            }
         }
+
+        if (possible)
+        {
+            cout << cmp1 << endl;
+        }
+
         else
         {
-            scores[i] = groups_with_extra - (i / k);
+            cout << -1 << endl;
         }
     }
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << scores[i] << " ";
-    }
-    cout << endl;
 
     return 0;
 }

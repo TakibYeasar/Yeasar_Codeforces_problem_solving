@@ -26,3 +26,47 @@
 # "Sasha", if Sasha wins with optimal play;
 # "Anna", if Anna wins with optimal play.
 
+def count_digits(num):
+    """Counts the number of digits in a non-negative integer."""
+    count = 0
+    while num > 0:
+        num //= 10
+        count += 1
+    return count
+
+
+def count_zeroes(num):
+    """Counts the number of leading zeros in a non-negative integer."""
+    count = 0
+    while num > 0 and num % 10 == 0:
+        num //= 10
+        count += 1
+    return count
+
+
+def main():
+    t = int(input())
+
+    for _ in range(t):
+        n, m = map(int, input().split())
+        nums = [int(num) for num in input().split()]
+
+        digit_sum = 0
+        zeroes = [count_zeroes(num) for num in nums]
+
+        zeroes.sort(reverse=True)
+
+        removed_zeroes = 0
+        for i in range(n):
+            removed_zeroes += min(zeroes[i], (m + 1) // 2)
+
+        digit_sum -= removed_zeroes
+
+        if digit_sum >= (m + 1):
+            print("Sasha")
+        else:
+            print("Anna")
+
+
+if __name__ == "__main__":
+    main()

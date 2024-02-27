@@ -32,20 +32,21 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-        int k, x, a;
+        long long k, x, a;
         cin >> k >> x >> a;
 
-        int aa = a;
-        int curr = 1;
+        long long aa = a;
+        long long curr = 1;
 
-        for (int i = 1; i < x; i++)
+        for (long long i = 1; i < x; i++)
         {
-            int next = (curr) / (k - 1);
+            long long next = (curr) / (k - 1);
             next++;
             curr += next;
             if (curr > a)
             {
-                cout<<"NO"<<endl; 
+                cout<<"NO"<<endl;
+                goto next_testcase;
             }
         }
 
@@ -53,7 +54,9 @@ int main(){
         if (a < 0)
         {
             cout << "NO" << endl;
+            goto next_testcase;
         }
+
         a *= k;
         if (a > aa)
         {
@@ -61,6 +64,10 @@ int main(){
         }else {
             cout << "NO" << endl;
         }
+
+    next_testcase:
+        continue;
     }
+
     return 0;
 }

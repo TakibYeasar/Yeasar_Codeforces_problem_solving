@@ -79,7 +79,7 @@ int main()
         int removedZeroes = 0;
         for (int i = 0; i < n; i++)
         {
-            removedZeroes += min(zeroes[i], (m + 1) / 2);
+            removedZeroes += min(zeroes[i], m);
         }
 
         digitSum -= removedZeroes;

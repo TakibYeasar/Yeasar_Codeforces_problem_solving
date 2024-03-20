@@ -1,3 +1,7 @@
+
+// Problem link ===>> https://codeforces.com/contest/1931/problem/A
+// submission link ===>> https://codeforces.com/contest/1931/submission/246180400
+
 #include <iostream>
 #include <string>
 using namespace std;

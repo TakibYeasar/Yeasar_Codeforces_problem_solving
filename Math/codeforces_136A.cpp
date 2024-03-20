@@ -1,9 +1,6 @@
 
-// The first line contains one integer n(1 ≤ n ≤ 100) — the quantity of friends Petya invited to the party.The second
-// line contains n space - separated integers : the i - th number is pi — the number of a friend who gave a gift to
-// friend number i.It is guaranteed that each friend received exactly one gift.It is possible that some friends
-// do not share Petya's ideas of giving gifts to somebody else. Those friends gave the gifts to themselves.
-// Print n space separated integers : the i - th number should equal the number of the friend who gave a gift to friend number i.
+// Problem link ===>> https://codeforces.com/problemset/problem/136/A
+// submission link ===>> https://codeforces.com/contest/136/submission/228041107
 
 #include <iostream>
 #include <vector>

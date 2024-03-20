@@ -1,3 +1,7 @@
+
+// Problem link ===>> https://codeforces.com/contest/1932/problem/A
+// submission link ===>> https://codeforces.com/contest/1932/submission/247087421
+
 #include <iostream>
 #include <vector>
 

@@ -1,8 +1,6 @@
 
-// The first line of the input contains two integer numbers n and k(2≤n≤109, 1≤k≤50) — the number from which
-// Tanya will subtract and the number of subtractions correspondingly.
-// Print one integer number — the result of the decreasing n by one k times.
-// It is guaranteed that the result will be positive integer number.
+// Problem link ===>> https://codeforces.com/problemset/problem/977/A
+// submission link ===>> https://codeforces.com/contest/977/submission/224924369
 
 #include <iostream>
 using namespace std;

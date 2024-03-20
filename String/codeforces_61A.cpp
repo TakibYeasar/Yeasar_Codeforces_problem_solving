@@ -1,8 +1,6 @@
 
-// There are two lines in each input.Each of them contains a single number.It is guaranteed that the numbers are made
-// from 0 and 1 only and that their length is same.The numbers may start with 0. The length of each number doesn't exceed 100.
-// Write one line — the corresponding answer.Do not omit the leading 0s.
-
+// Problem link ===>> https://codeforces.com/problemset/problem/61/A
+// submission link ===>> https://codeforces.com/contest/61/submission/228045284
 
 #include <bits/stdc++.h>
 using namespace std;

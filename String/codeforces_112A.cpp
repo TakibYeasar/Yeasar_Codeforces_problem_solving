@@ -1,9 +1,6 @@
 
-// Each of the first two lines contains a bought string.The strings' lengths range from 1 to 100 inclusive. It is
-// guaranteed that the strings are of the same length and also consist of uppercase and lowercase Latin letters.
-// If the first string is less than the second one,print "-1".If the second string is less than the first one,
-// print "1".If the strings are equal, print "0".Note that the letters' case is not taken into consideration
-// when the strings are compared.
+// Problem link ===>> https://codeforces.com/problemset/problem/112/A
+// submission link ===>> https://codeforces.com/contest/112/submission/209300308
 
 #include <iostream>
 #include <algorithm>

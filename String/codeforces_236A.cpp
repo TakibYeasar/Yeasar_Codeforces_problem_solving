@@ -1,7 +1,6 @@
 
-// The first line contains a non - empty string, that contains only lowercase English letters — the user name.
-// This string contains at most 100 letters. If it is a female by our hero's method, print "CHAT WITH HER!"
-// (without the quotes), otherwise, print "IGNORE HIM!" (without the quotes).
+// Problem link ===>> https://codeforces.com/problemset/problem/236/A
+// submission link ===>> https://codeforces.com/contest/236/submission/209302864
 
 #include <iostream>
 #include <set>

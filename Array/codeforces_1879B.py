@@ -1,8 +1,5 @@
-# The first line contains a single integer t(1≤t≤104) — the number of test cases.
-# The first line of each test case contains a single integer n(1≤n≤3⋅105).
-# The second line contains n integers a1, a2,…, an(1≤ai≤109). The third line contains n integers b1,
-# b2,…, bn(1≤bi≤109). The sum of n over all test cases doesn't exceed 3⋅105 .
-# For each test case, print a single integer — the minimum possible total cost of putting chips according to the rules.
+
+# Problem link ===>> https://codeforces.com/problemset/problem/1879/B
 
 def solve():
     n = int(input())

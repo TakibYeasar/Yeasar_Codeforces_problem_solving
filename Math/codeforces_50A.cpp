@@ -1,6 +1,6 @@
 
-// In a single line you are given two integers M and N — board sizes in squares(1 ≤ M ≤ N ≤ 16).
-// Output one number — the maximal number of dominoes,which can be placed.
+// Problem link ===>> https://codeforces.com/problemset/problem/50/A
+// submission link ===>> https://codeforces.com/contest/50/submission/207222170
 
 #include <iostream>
 using namespace std;

@@ -1,11 +1,5 @@
-# Each test consists of multiple test cases.The first line contains a single integer t(1≤t≤25000) — the number of test cases.
-# The description of test cases follows.
-# The first line of each test case contains a single integer n(1≤n≤25000) — the number of arrays in the list.
-# This is followed by descriptions of the arrays.Each array description consists of two lines.
-# The first line contains a single integer mi(2≤mi≤50000) — the number of elements in the i - th array.
-# The next line contains mi integers ai, 1, ai, 2,…, ai, mi(1≤ai, j≤109) — the elements of the i - th array.
-# It is guaranteed that the sum of mi over all test cases does not exceed 50000 .
-# For each test case,output a single line containing a single integer — the maximum beauty of the list of arrays that Olya can achieve.
+
+# Problem link ===>> https://codeforces.com/problemset/problem/1859/B
 
 import sys
 from heapq import heappush, heappop

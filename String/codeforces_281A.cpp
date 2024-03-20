@@ -1,7 +1,6 @@
 
-// A single line contains a non - empty word.This word consists of lowercase and uppercase English letters.The length of
-// the word will not exceed 103.
-// Output the given word after capitalization.
+// Problem link ===>> https://codeforces.com/problemset/problem/281/A
+// submission link ===>> https://codeforces.com/contest/281/submission/209301918
 
 #include <iostream>
 #include <string>

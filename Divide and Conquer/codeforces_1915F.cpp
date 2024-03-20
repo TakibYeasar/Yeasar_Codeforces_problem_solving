@@ -1,17 +1,6 @@
-// There are n people on the number line; the i -th person is at point ai and wants to go to point bi.
-// For each person, ai<bi, and the starting and ending points of all people are distinct. (That is, all of the 2n
-// numbers a1,a2,…,an,b1,b2,…,bn are distinct.)
-// All the people will start moving simultaneously at a speed of 1 unit per second until they reach their final point bi.
-// When two people meet at the same point, they will greet each other once. How many greetings will there be?
-// Note that a person can still greet other people even if they have reached their final point.
-// Input
-// The first line of the input contains a single integer t (1≤t≤104) — the number of test cases. The description of test cases follows.
-// The first line of each test case contains a single integer n (1≤n≤2⋅105) — the number of people.
-// Then n lines follow, the i-th of which contains two integers ai and bi (−109≤ai<bi≤109) — the starting and ending positions of each person.
-// For each test case, all of the 2n numbers a1,a2,…,an,b1,b2,…,bn are distinct.
-// The sum of n over all test cases does not exceed 2⋅105.
-// Output
-// For each test case, output a single integer denoting the number of greetings that will happen.
+
+// Problem link ===>> https://codeforces.com/problemset/problem/1915/F
+// submission link ===>> https://codeforces.com/contest/1915/submission/241941449
 
 // #include <iostream>
 // #include <vector>

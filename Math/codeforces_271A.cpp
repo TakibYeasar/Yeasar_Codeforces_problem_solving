@@ -1,7 +1,6 @@
 
-// The single line contains integer y(1000 ≤ y ≤ 9000) — the year number.
-// Print a single integer — the minimum year number that is strictly larger than y and all it's digits are distinct.
-// It is guaranteed that the answer exists.
+// Problem link ===>> https://codeforces.com/problemset/problem/271/A
+// submission link ===>> https://codeforces.com/contest/271/submission/225685773
 
 #include <iostream>
 using namespace std;

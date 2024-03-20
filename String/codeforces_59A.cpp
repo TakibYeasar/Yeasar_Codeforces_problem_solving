@@ -1,7 +1,6 @@
 
-// The first line contains a word s — it consists of uppercase and lowercase Latin letters and possesses the length from 1 to 100.
-// Print the corrected word s.If the given word s has strictly more uppercase letters, make the word written in the
-// uppercase register, otherwise - in the lowercase one.
+// Problem link ===>> https://codeforces.com/problemset/problem/59/A
+// submission link ===>> https://codeforces.com/contest/59/submission/220993449
 
 #include <iostream>
 #include <string>

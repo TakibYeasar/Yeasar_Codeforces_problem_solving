@@ -1,6 +1,5 @@
 
-# The single line contains the positive integer n(1 ≤ n ≤ 1015).
-# Print f(n) in a single line.
+# Problem link ===>> https://codeforces.com/problemset/problem/486/A
 
 def calculating_function(n):
   """Returns the result of the calculating function on the given input number.

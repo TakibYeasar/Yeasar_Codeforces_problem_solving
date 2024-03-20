@@ -1,8 +1,5 @@
 
-# The first line contains a single integer n(1 ≤ n ≤ 100) — the number of rooms.
-# The i- th of the next n lines contains two integers pi and qi(0 ≤ pi ≤ qi ≤ 100) — the number of people
-# who already live in the i - th room and the room's capacity.
-# Print a single integer — the number of rooms where George and Alex can move in.
+# Problem link ===>> https://codeforces.com/problemset/problem/467/A
 
 def count_rooms_with_space(rooms):
   """Counts the number of rooms that have at least two spaces available.

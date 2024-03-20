@@ -1,7 +1,6 @@
 
-// The first line contains a non - empty string s — the sum Xenia needs to count.String s contains no spaces.It only contains
-// digits and characters "+".Besides, string s is a correct sum of numbers 1, 2 and 3. String s is at most 100 characters long.
-// Print the new sum that Xenia can count.
+// Problem link ===>> https://codeforces.com/problemset/problem/339/A
+// submission link ===>> https://codeforces.com/contest/339/submission/209301538
 
 #include <iostream>
 #include <algorithm>

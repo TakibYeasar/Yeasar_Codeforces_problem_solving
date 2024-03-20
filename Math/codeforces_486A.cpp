@@ -1,6 +1,6 @@
 
-// The single line contains the positive integer n(1 ≤ n ≤ 1015).
-// Print f(n) in a single line.
+// Problem link ===>> https://codeforces.com/problemset/problem/486/A
+// submission link ===>> https://codeforces.com/contest/486/submission/228046103
 
 #include <bits/stdc++.h>
 using namespace std;

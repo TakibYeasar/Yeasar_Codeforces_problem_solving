@@ -1,9 +1,5 @@
 
-# The first line contains a single integer t(1≤t≤3⋅104) — the number of test cases.
-# The first and only line of each test case contains the string s(1≤ | s |≤3⋅105) consisting of characters 0,
-# 1, and / or ?.The sum of the string lengths over all test cases does not exceed 3⋅105 .
-# For each test case,print a binary string with the minimum possible cost among those that match the
-# given pattern.If there are multiple answers, print any of them.
+# Problem link ===>>  https://codeforces.com/problemset/problem/1837/C
 
 t = int(input())
 for _ in range(t):

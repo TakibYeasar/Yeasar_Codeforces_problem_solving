@@ -1,16 +1,5 @@
-#
-#     The first line contains one integer t(1≤t≤100) — the number of test cases.
-#
-#     The first line of each test case contains one integer n(2≤n≤100) — the number of athletes.Then n
-#     lines follow,
-#     the i
-#         - th of them contains two integers si and ei(1≤si≤109; 1≤ei≤100) — the strength and the endurance of the i
-#         - th athlete.
-#
-# For each test case, print the answer as follows: if the answer exists, print one integer — the value of
-# w meeting the constraints.The integer you print should satisfy 1≤w≤109 .It can be shown that if the answer exists,
-# at least one such value of w exists as well.If there are multiple answers, you can print any of them;
-# otherwise, print one integer −1.
+
+# Problem link ===>> https://codeforces.com/problemset/problem/1879/A
 
 def solve(n, k):
     if n % k != 0:

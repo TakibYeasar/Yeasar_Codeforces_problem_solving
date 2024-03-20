@@ -1,10 +1,5 @@
-# Each test contains multiple test cases.The first line contains a single integer t(1≤t≤500)
-# — the number of test cases.Each test case is described as follows.
-# The first line of each test case contains an integer n(1≤n≤100) — the length of the array a.
-# The second line of each test case contains n integers a1, a2,…, an(1≤ai≤100) — the elements of the array a.
-# For each test case, print - 1 if there is no solution.Otherwise, print b1, b2,…, bn
-# — an array consisting of numbers 1, 2, 3 that satisfies exactly two out of three conditions.
-# If there are multiple possible answers, you can print any of them.
+
+# Problem link ===>> https://codeforces.com/problemset/problem/1894/B?locale=en
 
 def solve():
     n = int(input())

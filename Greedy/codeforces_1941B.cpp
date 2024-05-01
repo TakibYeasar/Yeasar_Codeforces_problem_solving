@@ -24,7 +24,7 @@ int main(){
                 continue;
             }
             else if(a[i]<0){
-                cout << "NO";
+                cout << "NO" << endl;
             } else {
                 a[i + 1] -= 2 * a[i];
                 a[i + 2] -= a[i];
@@ -32,11 +32,11 @@ int main(){
         }
         if (a[n - 2] == 0 && a[n - 1] == 0)
         {
-            cout << "YES";
+            cout << "YES" <<endl;
         }
         else
         {
-            cout << "NO";
+            cout << "NO" << endl;
         }
     }
     return 0;

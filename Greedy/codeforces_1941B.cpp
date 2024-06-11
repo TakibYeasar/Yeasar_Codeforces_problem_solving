@@ -1,43 +1,51 @@
 
 // Problem link ===>> https://codeforces.com/problemset/problem/1941/B
-// submission link ===>> https://codeforces.com/contest/1941/submission/252807960
+// submission link ===>> https://codeforces.com/contest/1941/submission/263027060
 
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
 
-int main(){
+int main()
+{
     ll t;
     cin >> t;
-    while(t--){
+
+    for (ll i = 0; i < t; i++)
+    {
         ll n;
         cin >> n;
 
         vector<ll> a(n);
-        for (ll i = 0; i < n; i++)
+        for (ll j = 0; j < n; j++)
         {
-            cin >> a[i];
+            cin >> a[j];
         }
 
-        for (ll i = 0; i < n - 2; i++){
-            if(a[i]==0){
-                continue;
-            }
-            else if(a[i]<0){
-                cout << "NO" << endl;
-            } else {
-                a[i + 1] -= 2 * a[i];
-                a[i + 2] -= a[i];
-            }
-        }
-        if (a[n - 2] == 0 && a[n - 1] == 0)
+        bool possible = true;
+        for (ll j = 0; j < n - 2; j++)
         {
-            cout << "YES" <<endl;
+            if (a[j] < 0)
+            {
+                possible = false;
+                break;
+            }
+
+            ll op = a[j];
+            a[j] -= op;
+            a[j + 1] -= 2 * op;
+            a[j + 2] -= op;
+        }
+
+        if (possible && a[n - 1] == 0 && a[n - 2] == 0)
+        {
+            cout << "YES" << endl;
         }
         else
         {
             cout << "NO" << endl;
         }
     }
+
     return 0;
 }

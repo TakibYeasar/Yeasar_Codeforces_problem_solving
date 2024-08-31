@@ -1,6 +1,6 @@
 
 // Problem link ===>> https://codeforces.com/contest/2004/problem/C
-// submission link ===>>https://codeforces.com/contest/2004/submission/277421348
+// submission link ===>> https://codeforces.com/contest/2004/submission/277542696
 
 #include <bits/stdc++.h>
 #define ll long long

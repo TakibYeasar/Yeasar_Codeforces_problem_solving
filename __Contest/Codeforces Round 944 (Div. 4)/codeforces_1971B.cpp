@@ -1,5 +1,5 @@
 // Problem link ===>> https://codeforces.com/problemset/problem/1971/B
-// submission link ===>>
+// submission link ===>> https://codeforces.com/contest/1971/submission/289026820
 
 #include <bits/stdc++.h>
 #define ll long long
@@ -16,24 +16,26 @@ int main()
         cin >> s;
 
         int n = s.length();
+        bool all_same = true;
 
-        if (n > 1)
+        for (int i = 1; i < n; i++)
         {
-            for (int i = 1; i < n; i++)
+            if (s[i] != s[0])
             {
-                if (s[i] != s[0])
-                {
-                    cout << "YES" << endl;
-                    next_permutation(s.begin(), s.end());
-                    cout << s << endl;
-                    break;
-                }
+                all_same = false;
+                break;
             }
+        }
+
+        if (all_same)
+        {
+            cout << "NO" << endl;
         }
         else
         {
-            cout << "NO" << endl;
-            break;
+            cout << "YES" << endl;
+            next_permutation(s.begin(), s.end());
+            cout << s << endl;
         }
     }
 

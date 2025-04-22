@@ -1,5 +1,5 @@
 
-# Problem link ===>> https://codeforces.com/problemset/problem/2092/C
+# Problem link ===>> https://codeforces.com/problemset/problem/2096/B
 
 import sys
 import math
@@ -15,22 +15,10 @@ INF = float('inf')
 input = sys.stdin.read
 print = sys.stdout.write
 
-
 def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        a = [int(i) for i in input().split()]
-        ans, cnt =0, 0
-        for i in a:
-            ans += i
-            cnt += i%2
-        
-        if not cnt or cnt ==n:
-            print(max(a))
-        else:
-            print(ans - cnt+1)
-
 
 if __name__ == "__main__":
     main()

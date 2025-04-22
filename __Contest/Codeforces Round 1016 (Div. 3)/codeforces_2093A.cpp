@@ -1,6 +1,6 @@
 
-// Problem link ===>> https://codeforces.com/problemset/problem/2092/C
-// submission link ===>> https://codeforces.com/contest/2092/submission/315970140
+// Problem link ===>> https://codeforces.com/contest/2093/problem/A
+// submission link ===>> https://codeforces.com/contest/2093/submission/314563377
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -26,34 +26,26 @@ template <typename K, typename V>
 using ordered_map_mul = tree<
     K, V, less_equal<K>, rb_tree_tag, tree_order_statistics_node_update>;
 
-
 int main()
 {
     ios_base::sync_with_stdio(false);
     cout.tie(nullptr);
     cin.tie(nullptr);
-    
+
     ll t;
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
+        ll k;
+        cin >> k;
 
-        vector<int> a(n);
-        ll ans = 0, cnt = 0;
-        for (int i = 0; i < n;i++){
-            cin >> a[i];
-            ans += a[i];
-            cnt += (a[i] & 1);
-        }
-        if (!cnt || cnt == n)
+        if (k % 2 == 1)
         {
-            cout << *max_element(a.begin(), a.end()) << '\n';
+            cout << "YES\n";
         }
         else
         {
-            cout << ans - cnt + 1 << '\n';
+            cout << "NO\n";
         }
     }
     return 0;

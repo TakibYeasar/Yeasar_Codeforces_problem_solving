@@ -1,6 +1,6 @@
 
-// Problem link ===>> https://codeforces.com/problemset/problem/2092/C
-// submission link ===>> https://codeforces.com/contest/2092/submission/315970140
+// Problem link ===>> https://codeforces.com/problemset/problem/2096/B
+// submission link ===>>
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -40,21 +40,7 @@ int main()
         ll n;
         cin >> n;
 
-        vector<int> a(n);
-        ll ans = 0, cnt = 0;
-        for (int i = 0; i < n;i++){
-            cin >> a[i];
-            ans += a[i];
-            cnt += (a[i] & 1);
-        }
-        if (!cnt || cnt == n)
-        {
-            cout << *max_element(a.begin(), a.end()) << '\n';
-        }
-        else
-        {
-            cout << ans - cnt + 1 << '\n';
-        }
+        
     }
     return 0;
 }

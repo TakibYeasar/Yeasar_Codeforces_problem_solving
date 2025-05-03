@@ -18,7 +18,26 @@ print = sys.stdout.write
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
+        n, k = map(int, input().split())
+        m = k-1
+        
+        l = list(map(int, input().split()))
+        r = list(map(int, input().split()))
+        
+        a=[]
+        b =[]
+        y =0
+        
+        for li, ri in zip(l, r):
+            a.append(max(li, ri))
+            b.append(min(li, ri))
+            y += max(li, ri)
+            
+        b.sort(reverse=True)
+        y+= sum(b[:m])
+        
+        x = y+1
+        print(x)
 
 if __name__ == "__main__":
     main()

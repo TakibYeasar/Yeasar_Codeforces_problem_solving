@@ -1,6 +1,6 @@
 
 // Problem link ===>> https://codeforces.com/problemset/problem/2096/B
-// submission link ===>>
+// submission link ===>> https://codeforces.com/contest/2096/submission/316707801
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -37,10 +37,36 @@ int main()
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
+        ll n, k;
+        cin >> n>>k;
+        ll m = k - 1;
 
-        
+        vector<ll> l(n), r(n);
+        for (ll i = 0; i < n; i++){
+            cin >> l[i];
+        }
+
+        for (ll i = 0; i < n; i++)
+        {
+            cin >> r[i];
+        }
+
+        vector<ll> a(n), b(n);
+        ll y = 0;
+        for (ll i = 0; i < n; i++){
+            a[i] = max(l[i], r[i]);
+            b[i] = min(l[i], r[i]);
+            y += a[i];
+        }
+
+        sort(b.begin(), b.end(), greater<>());
+        for (ll i = 0; i < m; i++)
+        {
+            y += b[i];
+        }
+
+        ll x = y + 1;
+        cout << x << endl;
     }
     return 0;
 }

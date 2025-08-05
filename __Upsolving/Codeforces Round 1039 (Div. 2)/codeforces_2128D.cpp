@@ -1,6 +1,6 @@
 
-// Problem link ===>> 
-// submission link ===>>
+// Problem link ===>> https://codeforces.com/contest/2128/problem/D
+// submission link ===>> https://codeforces.com/contest/2128/submission/332522089
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -32,7 +32,19 @@ int main()
         ll n;
         cin >> n;
 
-        
+        vector<ll> a(n);
+        for (ll i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+
+        ll sum = (n * (n+1) * (n+ 2)) / 6;
+        for (ll i = 0; i + 1 < n; ++i){
+            if(a[i] < a[i + 1]){
+                sum -= (i + 1) * (n - i - 1);
+            }
+        }
+        cout << sum << endl;
     }
     return 0;
 }

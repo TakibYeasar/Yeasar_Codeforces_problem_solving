@@ -1,6 +1,6 @@
 
 // Problem link ===>> https://codeforces.com/contest/2119/problem/D
-// submission link ===>>
+// submission link ===>> https://codeforces.com/contest/2119/submission/336534684
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -19,20 +19,62 @@ template <typename K, typename V>
 using ordered_map = tree<
     K, V, less<K>, rb_tree_tag, tree_order_statistics_node_update>;
 
+const int N = 5005;
+int f[N][N];
+
+// modular addition (to avoid overflow and keep values within mod)
+inline void add(int &x, int y, int mod)
+{
+    x += y;
+    if (x >= mod)
+        x -= mod;
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cout.tie(nullptr);
     cin.tie(nullptr);
-    
-    ll t;
+    cout.tie(nullptr);
+
+    int t;
     cin >> t;
     while (t--)
     {
-        ll n;
-        cin >> n;
+        int n, mod;
+        cin >> n >> mod;
 
-        
+        // reset DP
+        f[0][0] = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                f[i][j] = 0;
+            }
+        }
+
+        // DP transitions
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 0, now; j < i; j++)
+            {
+                if ((now = f[i - 1][j]))
+                {
+                    add(f[i][j + 1], now, mod);
+                    f[i][j] = (f[i][j] + (ll)(n - i + 1) * (j + 1) % mod * now % mod) % mod;
+                }
+            }
+        }
+
+        // calculate answer
+        int ans = 0;
+        for (int j = 0; j <= n; j++)
+        {
+            add(ans, f[n][j], mod);
+        }
+
+        cout << ans << endl;
     }
+
     return 0;
 }

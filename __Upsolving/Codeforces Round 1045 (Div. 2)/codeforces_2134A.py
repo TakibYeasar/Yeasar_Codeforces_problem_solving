@@ -1,0 +1,34 @@
+
+# Problem link ===>> https://codeforces.com/contest/2134/problem/A
+
+import sys
+import math
+import bisect
+import heapq
+from collections import defaultdict, deque, OrderedDict, Counter
+from functools import lru_cache, reduce
+from itertools import permutations, combinations, accumulate
+from typing import List, Tuple, Dict, Set, Optional, Union, Any
+
+MOD = 10**9 + 7
+INF = float('inf')
+input = sys.stdin.read
+print = sys.stdout.write
+
+def main():
+    t = int(input())
+    for _ in range(t):
+        n, a, b = map(int, input().split())
+    if a <= b:
+        if n % 2 == b % 2:
+            print('YES')
+        else:
+            print('NO')
+    else:
+        if n % 2 == a % 2 and n % 2 == b % 2:
+            print('YES')
+        else:
+            print('NO')
+
+if __name__ == "__main__":
+    main()

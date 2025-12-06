@@ -19,6 +19,14 @@ def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
+        for i in range(1, n):
+            for j in range(1, n + 1):
+
+                x = (i + j) % n
+                if x == 0:
+                    x = n
+
+                print(j, x)
 
 if __name__ == "__main__":
     main()
